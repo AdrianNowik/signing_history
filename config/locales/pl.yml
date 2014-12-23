@@ -1,0 +1,15 @@
+pl:
+  general:
+    headers:
+      signing_in_histories: 'Historia logowań'
+  signing_in_histories:
+    created_at: 'Data'
+    details: 'Szczegóły'
+    ip_address: 'Adres ip'
+    login: 'Login'
+    sign_status: 'Stan logowania'
+    signing:
+      succeed: 'Logowanie pomyślne'
+      failed: 'Logowanie nieudane'
+    headers:
+      index: 'Historia logowań'

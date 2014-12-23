@@ -1,0 +1,28 @@
+.row
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12
+%section#widget-grid
+  .row
+    %article.col-xs-12.col-sm-12.col-md-12.col-lg-12
+      #wid-id-0.jarviswidget.jarviswidget-color-blueDark{"data-widget-editbutton" => "false"}
+        %header
+          %span.widget-icon
+            %i.fa.fa-table
+          %h2=t("#{controller_name}.headers.#{action_name}")
+        %div
+          .jarviswidget-editbox
+          .widget-body
+            .table-responsive
+              %table.table.table-striped.table-bordered.table-condensed
+                %tr
+                  %th= t('signing_in_histories.login')
+                  %th= t('signing_in_histories.ip_address')
+                  %th= t('signing_in_histories.details')
+                  %th= t('signing_in_histories.sign_status')
+                  %th= t('signing_in_histories.created_at')
+                - @signing_in_histories.each do |signing_in_history|
+                  %tr
+                    %td= signing_in_history.login
+                    %td= signing_in_history.ip_address
+                    %td= signing_in_history.details
+                    %td= t("signing_in_histories.signing.#{signing_in_history.sign_succeed ? 'succeed' : 'failed'}")
+                    %td= date_with_time signing_in_history.created_at
