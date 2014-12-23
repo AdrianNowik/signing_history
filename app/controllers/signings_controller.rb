@@ -4,7 +4,6 @@ class SigningsController < SessionsController
     begin
       super
     ensure
-      binding.pry
       save_signing_history
     end
   end
