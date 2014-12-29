@@ -24,7 +24,7 @@ If You are already overriding sessions controller, name of overriding
 controller should be named SessionsController.
 
 When you are using this feature you have check signings history list at
-admin_signing_in_histories_path. There is default view made by smart
+admin_signing_in_histories_path. There is default view made in smart
 admin, but You can override this by adding
 app/views/admin/signings_in_histories/index view.
 
