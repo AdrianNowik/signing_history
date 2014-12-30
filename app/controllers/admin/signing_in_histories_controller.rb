@@ -1,6 +1,6 @@
-class Admin::SigningInHistoriesController < AdminController
+class Admin::SigningInHistoriesController < ApplicationController
   helper ApplicationHelper
-  before_action :authenticate_user!
+  before_filter :require_login
   layout proc {|controller| controller.request.xhr? ? false : "administration" }
 
   def index
