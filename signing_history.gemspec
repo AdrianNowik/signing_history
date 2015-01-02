@@ -18,5 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.0"
   s.add_dependency "browser"
+  s.add_dependency 'will_paginate-bootstrap'
 
 end

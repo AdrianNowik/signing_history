@@ -33,3 +33,4 @@
                     %td= signing_in_history.details
                     %td= t("signing_in_histories.signing.#{signing_in_history.sign_succeed ? 'succeed' : 'failed'}")
                     %td= date_with_time signing_in_history.created_at
+= will_paginate @signing_in_histories, renderer: BootstrapPagination::Rails, class: 'pull-right'
