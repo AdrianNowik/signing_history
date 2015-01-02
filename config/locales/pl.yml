@@ -2,9 +2,13 @@ pl:
   general:
     headers:
       signing_in_histories: 'Historia logowań'
+    search: 'Wyszukaj'
+    cancel: 'Anuluj'
   signing_in_histories:
     created_at: 'Data'
     details: 'Szczegóły'
+    filter: 'Filtruj'
+    clear_filters: 'Wyczyść filtry'
     ip_address: 'Adres ip'
     login: 'Login'
     sign_status: 'Stan logowania'
@@ -13,3 +17,13 @@ pl:
       failed: 'Logowanie nieudane'
     headers:
       index: 'Historia logowań'
+  signing_histories_searches:
+    new: 'Wyszukiwanie'
+  simple_form:
+    labels:
+      signing_in_history_search:
+        login: Login
+        date_from: Data od
+        date_to: Data do
+        sign_succeed: Status logowania
+

@@ -1,0 +1,12 @@
+$(".modal-body").remove()
+$(".modal-footer").remove()
+$(".modal").modal();
+$(".modal-title").html('<%= t("signing_histories_searches.new") %>');
+$(".modal-container").html('<%= j render "form" %>');
+$('.datepicker').datepicker({
+  language: 'pl',
+  autoclose: true,
+  todayBtn: 'linked',
+  todayHighlight: true,
+  format: 'dd.mm.yyyy'
+});

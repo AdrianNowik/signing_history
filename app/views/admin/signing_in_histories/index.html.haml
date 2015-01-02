@@ -7,6 +7,13 @@
         %header
           %span.widget-icon
             %i.fa.fa-table
+          - if params[:signing_in_history_search].present?
+            .widget-toolbar{role: 'menu'}
+              = link_to t('signing_in_histories.clear_filters'), admin_signing_in_histories_path, class: 'btn btn-danger btn-xs'
+          .widget-toolbar{role: 'menu'}
+            = link_to t('signing_in_histories.filter'), new_admin_signing_histories_search_path(search_params: params[:signing_in_history_search]),
+              class: 'btn btn-success btn-xs', remote: true
+
           %h2=t("#{controller_name}.headers.#{action_name}")
         %div
           .jarviswidget-editbox
@@ -26,3 +33,4 @@
                     %td= signing_in_history.details
                     %td= t("signing_in_histories.signing.#{signing_in_history.sign_succeed ? 'succeed' : 'failed'}")
                     %td= date_with_time signing_in_history.created_at
+= will_paginate @signing_in_histories, renderer: BootstrapPagination::Rails, class: 'pull-right'
