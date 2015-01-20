@@ -1,20 +1,26 @@
 pl:
+  mailers:
+    account_locked: 'Konto użytkownika %{user_details} zostało zablokowane'
+    account_locked_content: 'Konto użytkownika: %{user_details} zostało zablokowane z powodu przekroczenia maksymalnej ilości nieudanych prób logowania.'
   general:
     headers:
       signing_in_histories: 'Historia logowań'
     search: 'Wyszukaj'
     cancel: 'Anuluj'
   signing_in_histories:
+    account_locked: "Twoje konto zostało zablokowane. Aby odblokować konto skontaktuj się z administratorem."
     created_at: 'Data'
     details: 'Szczegóły'
     filter: 'Filtruj'
     clear_filters: 'Wyczyść filtry'
     ip_address: 'Adres ip'
     login: 'Login'
+    login_failed: "Niepoprawny adres e-mail lub hasło. Wykorzystałeś %{failed_attempts} z %{max_failed_attempts} prób logowań."
     sign_status: 'Stan logowania'
     signing:
       succeed: 'Logowanie pomyślne'
       failed: 'Logowanie nieudane'
+    wrong_login_params: "Niewłaściwe parametry logowania."
     headers:
       index: 'Historia logowań'
   signing_histories_searches:
