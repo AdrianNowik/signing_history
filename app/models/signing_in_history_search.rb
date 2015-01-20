@@ -12,7 +12,7 @@ class SigningInHistorySearch
 
 
   def search
-    signing_histories = SigningInHistory.all.order(:created_at)
+    signing_histories = SigningInHistory.all.order(created_at: :desc)
     if @sign_succeed.present?
       signing_histories = signing_histories.where(sign_succeed: @sign_succeed)
     end
