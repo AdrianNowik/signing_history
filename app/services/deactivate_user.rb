@@ -18,6 +18,6 @@ class DeactivateUser
   end
 
   def send_deactivation_notice
-    DeactivateUserMailer.send_deactivation_notice(admin_emails, @user).deliver
+    DeactivateUserMailer.delay(run_at: 1.minute.from_now).send_deactivation_notice(admin_emails, @user)
   end
 end

@@ -14,6 +14,7 @@ class CreateSigningInHistory
     SigningInHistory.create(login: @login, sign_succeed: @status, ip_address: @request.remote_ip, details: "#{@browser.platform}, #{@browser.name}",
                             user_id: user.try(:id))
     raise WrongLoginParamsError.new if user.blank?
+    raise DeactivatedError.new if user.deactivated
     if !@status && exceeded_failed_login_attempts?
       DeactivateUser.new(user).process
       raise DeactivatedError.new
